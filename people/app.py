@@ -1,8 +1,9 @@
 import faker
-
+from flask import Flask
 from my_app import app
 from flask import render_template
 
+app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("index.html")
