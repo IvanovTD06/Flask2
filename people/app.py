@@ -2,7 +2,7 @@ import faker
 from my_app import app
 
 @app.route("/people")
-def FAKER():
+def people():
     for i in range(10):
         fake = faker.Faker("ru_RU")
         fake = fake.profile()
