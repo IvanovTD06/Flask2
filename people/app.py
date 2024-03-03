@@ -6,6 +6,8 @@ from psycopg2.errors import OperationalError
 
 
 app = Flask(__name__)
+if __name__ == "__main__":
+    app.run(debug=True)
 
 def create_connection(db_name, db_user, db_password, db_host, db_port):
         connection = None
@@ -43,8 +45,7 @@ def home():
 
     return render_template("index.html", name = "Hello")
 
-if __name__ == "__main__":
-    app.run(debug=True)
+
 
 @app.route("/people")
 def people():
@@ -56,6 +57,4 @@ def people():
         query = f'''INSERT INTO public.flask2 data ({fake.name})'''
         execute(DB_connector, query)
 
-
-
-
+S
