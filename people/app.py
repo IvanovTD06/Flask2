@@ -46,7 +46,7 @@ def home():
 if __name__ == "__main__":
     app.run(debug=True)
 
-@app.route("/peopl")
+@app.route("/people")
 def people():
     DB_connector = create_connection("postgres", "student", "123456", "localhost", "5432")
     for i in range(10):
