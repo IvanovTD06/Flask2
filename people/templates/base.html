@@ -6,8 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <i>Hello People!</i>
-    {% extends "base.html" %}
-    {{ name }}
+    <div id="content">
+        {% block content%}
+        Тут строка
+        {% endblock %}
+    </div>
 </body>
 </html>
